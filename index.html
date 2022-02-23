@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Password Generator</title>
   </head>
@@ -11,28 +17,52 @@
     <div class="container">
       <div class="wraper">
         <div class="section-1">
-          <h1>Generate a random password</h1>
+          <h1>Generate a <span class="span-text">random password</span></h1>
           <p>Never use an insecure password again!</p>
-          <button>𓁩 Generate Password 𓁪</button>
-          <div class="checkbox">
+          <div class="btn-box">
+            <button id="btn-pass" class="btn-pass">
+              𓁩 <span class="span-pass">Generate Passwords</span> 𓁪
+            </button>
+          </div>
+          <div class="checkbox-container">
             <div>
               <label for="uppercase">A-Z</label>
-              <input type="checkbox" name="" id="uppercase" />
+              <input
+                type="checkbox"
+                name="uppercase"
+                id="uppercase"
+                class="checkbox-lar"
+              />
             </div>
 
             <div>
               <label for="lowercase">a-z</label>
-              <input type="checkbox" name="" id="lowercase" />
+              <input
+                type="checkbox"
+                name="lowercase"
+                id="lowercase"
+                class="checkbox-lar"
+              />
             </div>
 
             <div>
               <label for="character">character</label>
-              <input type="checkbox" name="" id="character" />
+              <input
+                type="checkbox"
+                name="character"
+                id="character"
+                class="checkbox-lar"
+              />
             </div>
 
             <div>
               <label for="number">0-9</label>
-              <input type="checkbox" name="" id="number" />
+              <input
+                type="checkbox"
+                name="number"
+                id="number"
+                class="checkbox-lar"
+              />
             </div>
           </div>
         </div>

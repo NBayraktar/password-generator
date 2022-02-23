@@ -1,0 +1,59 @@
+body {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 1.125rem;
+  /* color: #0284c7; */
+  color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 46.875rem;
+  background: #1f2937;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+}
+
+.wraper {
+  max-width: 31.25rem;
+  margin: 0 auto;
+}
+
+.span-text {
+  display: block;
+  font-size: 3.5rem;
+  color: #0284c7;
+}
+
+.span-pass {
+  color: #f3f4f6;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-pass {
+  font-size: 1.2rem;
+  padding: 0.5rem 8.9rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  background: #0284c7;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.checkbox-lar {
+  transform: scale(2);
+  margin-left: 1rem;
+  outline: none;
+  cursor: pointer;
+}
