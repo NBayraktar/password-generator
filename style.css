@@ -1,18 +1,33 @@
 body {
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-size: 1.125rem;
-  /* color: #0284c7; */
   color: #f3f4f6;
+  background: #c3c4c5;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1 {
+  padding-top: 4rem;
+  line-height: 2.4rem;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0.3rem 0 0 0;
+}
+
+label {
+  color: #0284c7;
+}
+
 .container {
   width: 46.875rem;
   background: #1f2937;
-  margin: 0 auto;
+  margin: 5rem auto;
   border-radius: 0.3rem;
+  box-shadow: 5px 10px 20px #1f2937;
 }
 
 .wraper {
@@ -21,13 +36,9 @@ body {
 }
 
 .span-text {
-  display: block;
+  display: inline-block;
   font-size: 3.5rem;
   color: #0284c7;
-}
-
-.span-pass {
-  color: #f3f4f6;
 }
 
 .btn-box {
@@ -38,22 +49,72 @@ body {
 .btn-pass {
   font-size: 1.2rem;
   padding: 0.5rem 8.9rem;
+  margin: 3rem 0;
   border-radius: 0.2rem;
   border: none;
   outline: none;
   background: #0284c7;
+  color: #1f2937;
   cursor: pointer;
+}
+
+.btn-pass:hover,
+.btn-pass:focus {
+  background: rgba(2, 132, 199, 0.1);
+  color: #f3f4f6;
+  transition: 0.3s ease-in-out;
 }
 
 .checkbox-container {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .checkbox-lar {
-  transform: scale(2);
-  margin-left: 1rem;
+  transform: scale(1.5);
+  margin-left: 0.5rem;
   outline: none;
   cursor: pointer;
+}
+
+.horizontal-line {
+  border-top: 1px solid rgba(2, 132, 199, 0.1);
+  margin: 2rem 0;
+}
+
+.box {
+  background: rgba(2, 132, 199, 0.1);
+  color: #f3f4f6;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.section-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.2rem;
+}
+
+.btn-reset {
+  background: rgba(2, 132, 199, 0.1);
+  color: #f3f4f6;
+  grid-column: span 2;
+  border-radius: 0.2rem;
+  padding: 0.7rem 0;
+  margin-bottom: 5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+  background: #0284c7;
+  color: #1f2937;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
