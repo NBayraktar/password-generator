@@ -12,6 +12,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Password Generator</title>
+    <script
+      src="https://kit.fontawesome.com/9ce60122e7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -24,6 +28,7 @@
               𓁩 Generate Password 𓁪
             </button>
           </div>
+
           <div class="checkbox-container">
             <div>
               <label for="uppercase">A-Z</label>
@@ -32,6 +37,7 @@
                 name="uppercase"
                 id="uppercase"
                 class="checkbox-lar"
+                checked
               />
             </div>
 
@@ -42,16 +48,18 @@
                 name="lowercase"
                 id="lowercase"
                 class="checkbox-lar"
+                checked
               />
             </div>
 
             <div>
-              <label for="character">symbols</label>
+              <label for="symbols">Symbols</label>
               <input
                 type="checkbox"
                 name="character"
-                id="character"
+                id="symbols"
                 class="checkbox-lar"
+                checked
               />
             </div>
 
@@ -60,19 +68,39 @@
               <input
                 type="checkbox"
                 name="number"
-                id="number"
+                id="numbers"
                 class="checkbox-lar"
+                checked
               />
             </div>
           </div>
         </div>
+        <div class="pass-wrap">
+          <p class="pass-txt">
+            Password Lenght
+            <input
+              type="number"
+              class="pass-length"
+              min="4"
+              max="30"
+              placeholder="4"
+            />
+          </p>
+        </div>
         <div class="horizontal-line"></div>
         <div class="section-2">
-          <div class="box">. . .</div>
-          <div class="box">. . .</div>
-          <div class="box">. . .</div>
-          <div class="box">. . .</div>
-          <button id="btn-reset" class="btn-reset">Clear Boxes</button>
+          <div id="pass-1" class="box result-container">
+            <span id="result" class="span-result">• • • •</span>
+            <button
+              id="clipboard"
+              class="btn-clipboard"
+              title="copy to clipboard"
+            >
+              <i class="fa-light fa-clipboard-list"></i>
+            </button>
+          </div>
+
+          <button id="btn-reset" class="btn-reset">Clear Box</button>
         </div>
       </div>
     </div>
