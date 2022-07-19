@@ -1,36 +1,43 @@
+// DOM elements
 const btnGenerate = document.getElementById('btn-generate');
 const upperEl = document.getElementById('uppercase');
 const lowerEl = document.getElementById('lowercase');
 const symbolsEl = document.getElementById('symbols');
 const numbersEl = document.getElementById('numbers');
+const lengthEl = document.getElementById('length');
+const resultEl = document.getElementById('result');
+const clipboardEl = document.getElementById('clipboard');
+const resetEl = document.getElementById('btn-reset');
 const alphaUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const alphaLower = 'abcdefghijklmnopqrstuvwxyz';
-const syms = '!@#$%^&*_-+=';
-const nums = '0123456789';
-const passLength = 10;
+const symbols = '!@#$%^&*_-+=';
+const numbers = '0123456789';
 
-const passBox1 = document.getElementById('pass-1');
-const passBox2 = document.getElementById('pass-2');
-const passBox3 = document.getElementById('pass-3');
-const passBox4 = document.getElementById('pass-4');
+const randomFunc = {
+  upper: getRandomUpper,
+  lower: getRandomLower,
+  symbol: getRandomSymbol,
+  number: getRandomNumber
+}
 
 btnGenerate.addEventListener('click', () => {
-  let characters = '';
-  upperEl.checked ? (characters += alphaUpper) : '';
-  lowerEl.checked ? (characters += alphaLower) : '';
-  symbolsEl.checked ? (characters += syms) : '';
-  numbersEl.checked ? (characters += nums) : '';
-
-  for (let i = 0; i < passLength; i++) {
-    let password = '';
-
-    password += characters.charAt(Math.floor(Math.random() * characters.length));
-
-  }
-
-
+  const length = Number(lengthEl.value);
+  console.log(typeof length);
 })
 
-function showPass(arg) {
+// Generator functions
+function getRandomUpper() {
+  return alphaUpper[Math.floor(Math.random() * alphaUpper.length)]
+}
 
+function getRandomLower() {
+  return alphaLower[Math.floor(Math.random() * alphaLower.length)];
+}
+
+function getRandomNumber() {
+  return numbers[Math.floor(Math.random() * numbers.length)];
+}
+
+function getRandomSymbol() {
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
